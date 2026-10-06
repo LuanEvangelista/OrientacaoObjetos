@@ -1,0 +1,27 @@
+# Arquivos gerados pelo .NET
+[Bb]in/
+[Oo]bj/
+TestResults/
+*.nupkg
+*.snupkg
+
+# Configuracoes locais de IDEs
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Segredos e configuracoes locais
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+
+# Arquivos temporarios do sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
