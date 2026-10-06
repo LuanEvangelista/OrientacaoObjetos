@@ -1,13 +1,14 @@
 ﻿using OrientacaoObjetos.ContentContext;
-using OrientacaoObjetos.ContentContext.Enum;
 
-var course = new Course();
-course.Level = EContentLevel.Advanced;
+var articles = new List<Article>();
+articles.Add(new Article("Artigo sobre OOP", "orientacao-objetos"));
+articles.Add(new Article("Artigo sobre C#", "csharp"));
+articles.Add(new Article("Artigo sobre .NET", "dotnet"));
 
 
-foreach (var item in course.Modules)
+foreach (var item in articles)
 {
-    Console.WriteLine(item);
+    Console.WriteLine(item.Id);
+    Console.WriteLine(item.Title);
+    Console.WriteLine(item.Url);
 }
-
-
