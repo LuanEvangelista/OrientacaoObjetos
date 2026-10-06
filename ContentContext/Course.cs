@@ -1,8 +1,8 @@
 
 namespace OrientacaoObjetos.ContentContext
 {
-    public class Course
+    public class Course : Content
     {
-        
+
     }
 }

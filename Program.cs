@@ -1,1 +1,5 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using OrientacaoObjetos.ContentContext;
+
+var course = new Course();
+
+

@@ -1,8 +1,8 @@
 
 namespace OrientacaoObjetos.ContentContext
 {
-    public class Career
+    public class Career : Content
     {
-        
+
     }
 }
