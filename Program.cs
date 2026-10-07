@@ -27,9 +27,9 @@ courses.Add(courseDotnet);
 var careers = new List<Career>();
 var careerDotNet = new Career("Especialista .NET", "especialista-dotnet");
 
-var careerItem = new CareerItem(1, "Comece por aqui", "Fundamentos do .NET", null);
-var careerItem2 = new CareerItem(2, "Avance para aqui", "Programação com C#", null);
-var careerItem3 = new CareerItem(3, "Domine por aqui", "Desenvolvimento Web", null);
+var careerItem = new CareerItem(3, "Comece por aqui", "Fundamentos do .NET", courseDotnet);
+var careerItem2 = new CareerItem(2, "Avance para aqui", "Programação com C#", courseCsharp);
+var careerItem3 = new CareerItem(1, "Domine por aqui", "Desenvolvimento OOP", courseOOP);
 
 
 careerDotNet.Items.Add(careerItem);
@@ -43,5 +43,8 @@ foreach (var career in careers)
     foreach (var item in career.Items.OrderBy(i => i.Order))
     {
         Console.WriteLine($"{item.Order}.  - {item.Title}");
+        Console.WriteLine(item.Course.Title);
+        Console.WriteLine(item.Course.Level);
+
     }
 }
