@@ -7,6 +7,7 @@ TestResults/
 
 # Configuracoes locais de IDEs
 .vs/
+.vscode/
 .idea/
 *.user
 *.suo
