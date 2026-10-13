@@ -2,6 +2,10 @@ namespace OrientacaoObjetos.NotificactionContext;
 
 public abstract class Notifiable
 {
+    public Notifiable()
+    {
+        Notifications = new List<Notification>();
+    }
 
     public List<Notification> Notifications { get; set; }
 

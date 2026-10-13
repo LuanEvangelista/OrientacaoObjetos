@@ -1,4 +1,5 @@
 ﻿using OrientacaoObjetos.ContentContext;
+using OrientacaoObjetos.SubscriptionContext;
 
 var articles = new List<Article>();
 articles.Add(new Article("Artigo sobre OOP", "orientacao-objetos"));
@@ -27,7 +28,7 @@ courses.Add(courseDotnet);
 var careers = new List<Career>();
 var careerDotNet = new Career("Especialista .NET", "especialista-dotnet");
 
-var careerItem = new CareerItem(3, "Comece por aqui", "Fundamentos do .NET", courseDotnet);
+var careerItem = new CareerItem(3, "Comece por aqui", "Fundamentos do .NET", null);
 var careerItem2 = new CareerItem(2, "Avance para aqui", "Programação com C#", courseCsharp);
 var careerItem3 = new CareerItem(1, "Domine por aqui", "Desenvolvimento OOP", courseOOP);
 
@@ -43,8 +44,17 @@ foreach (var career in careers)
     foreach (var item in career.Items.OrderBy(i => i.Order))
     {
         Console.WriteLine($"{item.Order}.  - {item.Title}");
-        Console.WriteLine(item.Course.Title);
-        Console.WriteLine(item.Course.Level);
+        Console.WriteLine(item.Course?.Title);
+        Console.WriteLine(item.Course?.Level);
+
+        foreach (var notification in item.Notifications)
+        {
+            Console.WriteLine($"{notification.Message} - {notification.Property}");
+        }
+
+        var paypal = new PayPalSubscripition();
+        var student = new Student();
+        student.CreateSubscription(paypal);
 
     }
 }

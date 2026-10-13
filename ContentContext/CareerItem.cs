@@ -1,3 +1,6 @@
+using OrientacaoObjetos.NotificactionContext;
+using OrientacaoObjetos.sharedContext;
+
 namespace OrientacaoObjetos.ContentContext
 {
 
@@ -6,7 +9,7 @@ namespace OrientacaoObjetos.ContentContext
         public CareerItem(int order, string title, string description, Course course)
         {
             if (course == null)
-                throw new ArgumentException("O curso não pode ser nulo.", nameof(course));
+                AddNotification(new Notification("Course", "Curso inválido"));
 
             Order = order;
             Title = title;

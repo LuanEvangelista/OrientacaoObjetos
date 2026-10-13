@@ -1,7 +1,7 @@
 
 using OrientacaoObjetos.NotificactionContext;
 
-namespace OrientacaoObjetos.ContentContext;
+namespace OrientacaoObjetos.sharedContext;
 
 public abstract class Base : Notifiable
 {

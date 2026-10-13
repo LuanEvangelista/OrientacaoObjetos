@@ -4,7 +4,7 @@ public sealed class Notification
 {
     public Notification() { }
 
-    public Notification(string message, string property)
+    public Notification(string property, string message)
     {
         Message = message;
         Property = property;

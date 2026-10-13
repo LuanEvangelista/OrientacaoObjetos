@@ -1,4 +1,6 @@
 
+using OrientacaoObjetos.sharedContext;
+
 namespace OrientacaoObjetos.ContentContext
 {
     public abstract class Content : Base
